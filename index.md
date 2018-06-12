@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 
-You can use the [editor on GitHub](https://github.com/knightlyj/archive/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+# Quaternion.Slerp
+很久之前就看到这个算法了,当年写过程序验证了插值确实正确,一直没有想清楚原理,最近看了PBRT上的说明,其中阐述了三维或二维的slerp,再扩展到四维并应用于四元数上,再结合网上搜索资料,个人感觉总无法把slerp与四元数的旋转插值对应起来,也许这是从更抽象的角度来看待这个问题吧.
+为了自己能够理解这个算法为什么会得到正确的插值,最近用自己能理解的数学知识证明了这个算法,在此记录下来,也希望能帮助到那些像我一样数学不太好的朋友.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 基于四元数的旋转
+首先,四元数表示旋转的公式:
 
-### Markdown
+$$q = cos\theta + sin\theta*\vec{v}$$
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+其中$$\vec{v}$$为单位向量,则四元数q为单位四元数,对于一点$$p$$,$${p}'=qpq^{-1}$$ 代表$$p$$绕 $$\vec{v}$$ 旋转$$2\theta$$角度后的位置
 
-```markdown
-Syntax highlighted code block
+## Slerp算法
 
-# Header 1
-## Header 2
-### Header 3
+$$slerp(q_{1}, q_{2}, t) = \frac{a+1}{ b+1}$$
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## 证明过程
 
-**Bold** and _Italic_ and `Code` text
+那么对于从$$q_{1} = q_{1}pq_{1}^{-1}$$到$$q_{2} = q_{2}pq_{2}^{-1}$$,需要经过一个中间四元数为$$q_{m}$$,使得$$q_{m}q_{1}pq_{1}^{-1}q_{m}^{-1} = q_{2}pq_{2}^{-1}$$,
 
-[Link](url) and ![Image](src)
-```
+所以这个中间四元数为
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+$$q_{m} = q_{2} * q_{1}^{-1}$$
 
-### Jekyll Themes
+把$$q_{m}$$写成旋转形式
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/knightlyj/archive/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+$$q_{m} = cos\theta + sin\theta*\vec{v}$$
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
