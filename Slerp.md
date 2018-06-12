@@ -30,3 +30,4 @@ $$q_{m} = cos\theta + sin\theta*\vec{v}$$
 
 
 
+惺惺惜惺惺
