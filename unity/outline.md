@@ -1,7 +1,7 @@
 # 物体轮廓线渲染
 前不久看到神海4中的效果,所以自己实现了一下,其中遇到一点问题,记录下来.
 
-[](https://raw.githubusercontent.com/knightlyj/archive/master/img/uncharted4-outline.png)
+![](https://raw.githubusercontent.com/knightlyj/archive/master/img/uncharted4-outline.png)
 
 ## 实现方法
 网上查找资料,画轮廓的方法基本都是把mesh放大一点,多渲染一遍.
