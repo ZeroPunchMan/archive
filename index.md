@@ -15,4 +15,7 @@ __[Quaternion.Slerp的理解](https://knightlyj.github.io/archive/graphics/slerp
 
 ### Unity相关
 __[轮廓线渲染](https://knightlyj.github.io/archive/unity/outline)__
-   
+  
+  
+## 其他
+__[fan--qiang: VPS搭建SS](https://knightlyj.github.io/archive/unity/climb-over-G-F-W)__ 
