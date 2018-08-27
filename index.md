@@ -18,4 +18,4 @@ __[轮廓线渲染](https://knightlyj.github.io/archive/unity/outline)__
   
   
 ## 其他
-__[fan--qiang: VPS搭建SS](https://knightlyj.github.io/archive/unity/climb-over-G-F-W)__ 
+__[fan--qiang: VPS搭建SS](https://knightlyj.github.io/archive/others/climb-over-G-F-W)__ 
