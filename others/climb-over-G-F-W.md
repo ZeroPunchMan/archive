@@ -44,7 +44,7 @@
 
 红框中的内容,与上面服务器配置相同,然后确定即可.然后到右下角的任务栏,钩选ss启动.可以选择PAC模式,或全局模式.PAC模式下,仅被qiang网站会通过代理访问.
 
-![](https://raw.githubusercontent.com/knightlyj/archive/master/img/ss-client2.png)
+![](https://raw.githubusercontent.com/knightlyj/archive/master/img/ss-started.png)
 
 # 补充
 通常一个节点在使用一段时间后会被封,被封时间长短不确定.
